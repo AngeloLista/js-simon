@@ -18,15 +18,25 @@ for (let i = 0; i < 5; i++) {
     numbers.push(number)
 }
 
-alert(numbers)
+alert(numbers);
 
 // Chiedo all'utente i numeri che ricorda
 userNumbers = []
+correctNumbers = [];
+
 
 setTimeout(function() {
     for (let i = 0; i < 5; i++) {
     number = parseInt(prompt('Inserisci i numeri che hai visto precedentemente'));
     userNumbers.push(number);
     }
-    console.log(userNumbers)
+    // Controllo quali numeri l'utente ha ricordato
+    for (let i = 0; i < userNumbers.length; i++) {
+        if (numbers.includes(userNumbers[i])) {
+            correctNumbers.push(userNumbers[i]);
+        }
+    }
+    console.log()
+    console.log(`Hai ricordato correttamente ${correctNumbers.length} numero/i:`, correctNumbers)
+
 }, 3000)
