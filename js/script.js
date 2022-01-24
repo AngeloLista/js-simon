@@ -10,6 +10,7 @@ function getRandomNumber(max) {
     return Math.floor(Math.random() * max);
 }
 
+// Genero numeri casuali
 numbers = [];
 
 for (let i = 0; i < 5; i++) {
@@ -18,3 +19,14 @@ for (let i = 0; i < 5; i++) {
 }
 
 alert(numbers)
+
+// Chiedo all'utente i numeri che ricorda
+userNumbers = []
+
+setTimeout(function() {
+    for (let i = 0; i < 5; i++) {
+    number = parseInt(prompt('Inserisci i numeri che hai visto precedentemente'));
+    userNumbers.push(number);
+    }
+    console.log(userNumbers)
+}, 3000)
