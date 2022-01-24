@@ -15,15 +15,14 @@ numbers = [];
 
 for (let i = 0; i < 5; i++) {
     let number = getRandomNumber(100);
-    numbers.push(number)
+    numbers.push(number);
 }
 
 alert(numbers);
 
 // Chiedo all'utente i numeri che ricorda
-userNumbers = []
+userNumbers = [];
 correctNumbers = [];
-
 
 setTimeout(function() {
     for (let i = 0; i < 5; i++) {
@@ -36,7 +35,7 @@ setTimeout(function() {
             correctNumbers.push(userNumbers[i]);
         }
     }
-    console.log()
-    console.log(`Hai ricordato correttamente ${correctNumbers.length} numero/i:`, correctNumbers)
+
+    console.log(`Hai ricordato correttamente ${correctNumbers.length} numero/i:`, correctNumbers);
 
 }, 3000)
